@@ -4,7 +4,7 @@ import React from 'react';
 const navLinks = ["Products", "Features", "Pricing", "Testimonials", "FAQ"];
 
 
-const NavBar = () => {
+const NavBar = ({ cartLength }) => {
     return (
         <nav className='py-6 border-b border-[#F2F2F2]'>
             <div className="flex items-center justify-between bg-base-100 max-w-300 w-11/12 xl:w-3/4 mx-auto">
@@ -39,7 +39,10 @@ const NavBar = () => {
 
                 <div className="">
                     <div className='flex items-center gap-4'>
-                        <ShoppingCart size={16} />
+                        <div className='relative'>
+                            <ShoppingCart size={24} />
+                            <span className='absolute -top-3 right-0 bg-rose-600 text-white rounded-full h-4 w-4 flex items-center justify-center text-xs'>{cartLength}</span>
+                        </div>
 
                         <button className='text-base font-semibold leading-[120%] text-black10'>Login</button>
 

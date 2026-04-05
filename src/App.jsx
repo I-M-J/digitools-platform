@@ -5,6 +5,7 @@ import Stats from './components/Stats/Stats'
 import ToolsHeading from './components/ToolsHeading/ToolsHeading'
 import ToolsCards from './components/ToolsCards/ToolsCards'
 import { Suspense, useState } from 'react'
+import Cart from './components/Cart/Cart'
 
 // const fetchToolsData = fetch("toolsData.json").then(res => res.json())
 
@@ -19,23 +20,33 @@ const fetchToolsData = async () => {
 function App() {
   const [activeTab, setActiveTab] = useState("products");
 
+  const [cart, setCart] = useState([]);
+
+  const cartLength = cart.length;
+
   let toolsDataPromise;
 
   toolsDataPromise = fetchToolsData();
 
   return (
     <>
-      <NavBar />
+      <NavBar cartLength={cartLength} />
 
       <Hero />
 
       <Stats />
 
-      <ToolsHeading activeTab={activeTab} setActiveTab={setActiveTab} />
+      <ToolsHeading activeTab={activeTab} setActiveTab={setActiveTab} cartLength={cartLength} />
 
-      <Suspense fallback={<div>Loading...</div>}>
-        <ToolsCards toolsDataPromise={toolsDataPromise} />
-      </Suspense>
+      {activeTab === "products" && (
+        <Suspense fallback={<div>Loading...</div>}>
+          <ToolsCards toolsDataPromise={toolsDataPromise} cart={cart} setCart={setCart} />
+        </Suspense>
+      )}
+
+      {activeTab === "cart" && (
+        <Cart cart={cart} setCart={setCart} />
+      )}
     </>
   )
 }

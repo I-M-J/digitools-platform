@@ -1,5 +1,5 @@
 import { Check } from 'lucide-react';
-import React from 'react';
+import React, { useState } from 'react';
 
 const badgeStyler = (badgeColor) => {
     switch (badgeColor) {
@@ -14,7 +14,18 @@ const badgeStyler = (badgeColor) => {
     }
 }
 
-const ToolsCard = ({ tool }) => {
+const ToolsCard = ({ tool, cart, setCart }) => {
+    let isAddedToCart = cart.some(item => item.id === tool.id);
+    // array.some() returns boolean if at least one element satisfies the condition
+
+    const handleAddToCart = () => {
+        if (!isAddedToCart) {
+            setCart([...cart, tool]);
+
+            isAddedToCart = true;
+        }
+    }
+
     return (
         <div className='p-6 space-y-4 relative border-2 border-[#F2F2F2] rounded-2xl'>
             <div className={`absolute top-2.5 right-2.5 rounded-full px-3 py-1.5 font-medium text-sm ${badgeStyler(tool.badgeColor)}`}>{tool.badge}</div>
@@ -23,21 +34,21 @@ const ToolsCard = ({ tool }) => {
                 <img className='max-w-8' src={`/src/assets/products/${tool.image}`} alt="" />
             </div>
 
-            <h2>{tool.title}</h2>
+            <h2 className='font-bold text-2xl text-black10'>{tool.title}</h2>
 
-            <p>{tool.description}</p>
+            <p className='text-gray62'>{tool.description}</p>
 
-            <h3>${tool.price}<span>/{tool.pricingType}</span></h3>
+            <h3 className='font-bold text-2xl text-black10'>${tool.price}<span className='font-normal text-base text-gray62'>/{tool.pricingType}</span></h3>
 
             <div>
                 <ul>
                     {
-                        tool.features.map((feature, index) => <li key={index}><Check size={20} color="#30B868" />{feature}</li>)
+                        tool.features.map((feature, index) => <li key={index} className='font-medium leading-5 text-gray62'><Check size={20} color="#30B868" />{feature}</li>)
                     }
                 </ul>
             </div>
 
-            <button className='btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white h-fit py-3.75 w-full font-bold rounded-full'>Explore Products</button>
+            <button onClick={handleAddToCart} className={`btn ${!isAddedToCart ? "bg-linear-to-r from-[#4F39F6] to-[#9514FA]" : "bg-green-400"} text-white h-fit py-3.75 w-full font-bold rounded-full`}>{isAddedToCart ? "Added to Cart" : "Buy Now"}</button>
         </div>
     );
 };
