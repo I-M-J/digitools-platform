@@ -5,7 +5,7 @@ import { Play } from 'lucide-react';
 const Hero = () => {
     return (
         <section className='py-21.25'>
-            <div className="bg-base-100 max-w-300 w-11/12 lg:w-3/4 mx-auto">
+            <div className="bg-base-100 max-w-300 w-11/12 xl:w-3/4 mx-auto">
                 <div className="flex items-center flex-col lg:flex-row-reverse p-0 justify-between gap-8 lg:gap-0">
                     <div className='w-5/12'>
                         <img

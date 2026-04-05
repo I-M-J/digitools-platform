@@ -7,7 +7,7 @@ const navLinks = ["Products", "Features", "Pricing", "Testimonials", "FAQ"];
 const NavBar = () => {
     return (
         <nav className='py-6 border-b border-[#F2F2F2]'>
-            <div className="flex items-center justify-between bg-base-100 max-w-300 w-11/12 lg:w-3/4 mx-auto">
+            <div className="flex items-center justify-between bg-base-100 max-w-300 w-11/12 xl:w-3/4 mx-auto">
                 <div className="flex items-center gap-4">
                     <div className="dropdown xl:hidden">
                         <div tabIndex={0} role="button" className="btn btn-ghost px-0">
