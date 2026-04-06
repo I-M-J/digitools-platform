@@ -5,7 +5,7 @@ const Pricing = ({ pricingDataPromise }) => {
     const pricingData = use(pricingDataPromise);
 
     return (
-        <section className=''>
+        <section className='py-30'>
             <div className='max-w-300 w-11/12 xl:3/4 mx-auto space-y-10'>
                 <div className='space-y-4 text-center'>
                     <h2 className='text-5xl font-extrabold text-black10'>Simple, Transparent Pricing</h2>

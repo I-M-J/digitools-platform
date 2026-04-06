@@ -8,6 +8,7 @@ import { Suspense, useState } from 'react'
 import Cart from './components/Cart/Cart'
 import GetStarted from './components/GetStarted/GetStarted'
 import Pricing from './components/Pricing/Pricing'
+import Transform from './components/Transform/Transform'
 
 // const fetchToolsData = fetch("toolsData.json").then(res => res.json())
 
@@ -61,6 +62,8 @@ function App() {
       <Suspense fallback={<div>Loading...</div>}>
         <Pricing pricingDataPromise={pricingDataPromise} />
       </Suspense>
+
+      <Transform />
     </>
   )
 }
