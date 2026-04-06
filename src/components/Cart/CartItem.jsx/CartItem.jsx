@@ -1,6 +1,12 @@
 import React from 'react';
 
 const CartItem = ({ tool, cart, setCart }) => {
+    const handleRemoveFromCart = () => {
+        cart.pop(tool);
+
+        setCart([...cart]);
+    }
+
     return (
         <div className='bg-[#F9FAFC] p-5 flex items-center justify-between rounded-2xl'>
             <div className='flex items-center gap-4'>
@@ -15,7 +21,7 @@ const CartItem = ({ tool, cart, setCart }) => {
             </div>
 
             <div>
-                <button className='font-bold text-base text-[#FF3980]'>Remove</button>
+                <button onClick={handleRemoveFromCart} className='font-bold text-base text-[#FF3980] hover:cursor-pointer'>Remove</button>
             </div>
         </div>
     );
