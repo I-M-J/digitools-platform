@@ -27,7 +27,7 @@ const ToolsCard = ({ tool, cart, setCart }) => {
     }
 
     return (
-        <div className='p-6 space-y-4 relative border-2 border-[#F2F2F2] rounded-2xl'>
+        <div className='p-6 flex flex-col gap-4 relative border-2 border-[#F2F2F2] rounded-2xl'>
             <div className={`absolute top-2.5 right-2.5 rounded-full px-3 py-1.5 font-medium text-sm ${badgeStyler(tool.badgeColor)}`}>{tool.badge}</div>
 
             <div className='w-15 h-15 flex justify-center items-center border border-[#F2F2F2] rounded-full'>
@@ -40,13 +40,13 @@ const ToolsCard = ({ tool, cart, setCart }) => {
 
             <h3 className='font-bold text-2xl text-black10'>${tool.price}<span className='font-normal text-base text-gray62'>/{tool.pricingType}</span></h3>
 
-            <div>
-                <ul>
-                    {
-                        tool.features.map((feature, index) => <li key={index} className='font-medium leading-5 text-gray62'><Check size={20} color="#30B868" />{feature}</li>)
-                    }
-                </ul>
-            </div>
+            <ul className='flex-1'>
+                {
+                    tool.features.map((feature, index) => (
+                        <li key={index} className='font-medium leading-5 text-gray62 flex items-center gap-2'><Check size={20} color="#30B868" />{feature}</li>
+                    ))
+                }
+            </ul>
 
             <button onClick={handleAddToCart} className={`btn ${!isAddedToCart ? "bg-linear-to-r from-[#4F39F6] to-[#9514FA]" : "bg-green-400"} text-white h-fit py-3.75 w-full font-bold rounded-full`}>{isAddedToCart ? "Added to Cart" : "Buy Now"}</button>
         </div>

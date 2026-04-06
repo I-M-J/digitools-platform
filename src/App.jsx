@@ -7,6 +7,7 @@ import ToolsCards from './components/ToolsCards/ToolsCards'
 import { Suspense, useState } from 'react'
 import Cart from './components/Cart/Cart'
 import GetStarted from './components/GetStarted/GetStarted'
+import Pricing from './components/Pricing/Pricing'
 
 // const fetchToolsData = fetch("toolsData.json").then(res => res.json())
 
@@ -16,7 +17,11 @@ const fetchToolsData = async () => {
   return data;
 }
 
-
+const fetchPricingData = async () => {
+  const res = await fetch("pricingData.json");
+  const data = await res.json();
+  return data;
+}
 
 function App() {
   const [activeTab, setActiveTab] = useState("products");
@@ -28,6 +33,8 @@ function App() {
   let toolsDataPromise;
 
   toolsDataPromise = fetchToolsData();
+
+  const pricingDataPromise = fetchPricingData();
 
   return (
     <>
@@ -50,6 +57,10 @@ function App() {
       )}
 
       <GetStarted />
+
+      <Suspense fallback={<div>Loading...</div>}>
+        <Pricing pricingDataPromise={pricingDataPromise} />
+      </Suspense>
     </>
   )
 }
