@@ -6,6 +6,7 @@ import ToolsHeading from './components/ToolsHeading/ToolsHeading'
 import ToolsCards from './components/ToolsCards/ToolsCards'
 import { Suspense, useState } from 'react'
 import Cart from './components/Cart/Cart'
+import GetStarted from './components/GetStarted/GetStarted'
 
 // const fetchToolsData = fetch("toolsData.json").then(res => res.json())
 
@@ -47,6 +48,8 @@ function App() {
       {activeTab === "cart" && (
         <Cart cart={cart} setCart={setCart} />
       )}
+
+      <GetStarted />
     </>
   )
 }
