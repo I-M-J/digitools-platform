@@ -9,6 +9,7 @@ import Cart from './components/Cart/Cart'
 import GetStarted from './components/GetStarted/GetStarted'
 import Pricing from './components/Pricing/Pricing'
 import Transform from './components/Transform/Transform'
+import Footer from './components/Footer/Footer'
 
 // const fetchToolsData = fetch("toolsData.json").then(res => res.json())
 
@@ -64,6 +65,8 @@ function App() {
       </Suspense>
 
       <Transform />
+
+      <Footer />
     </>
   )
 }
