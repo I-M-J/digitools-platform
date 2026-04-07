@@ -1,16 +1,33 @@
-# React + Vite
+# DigiTools
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div align="center">
+  <h3>A simple platform to find and manage useful digital tools.</h3>
+</div>
 
-Currently, two official plugins are available:
+<br />
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## About The Project
 
-## React Compiler
+**DigiTools** is a beautiful web app for exploring digital products. It offers a smooth and easy way to browse tools, check pricing, and manage your shopping cart. The app is fast and simple to navigate, making the user experience great.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Technology Stack
 
-## Expanding the ESLint configuration
+This project uses modern tools to keep it fast and looking good:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **React 19** - For building the user interface.
+* **Vite** - A fast setup and build tool.
+* **Tailwind CSS v4** - For quick and easy styling.
+* **DaisyUI** - Ready-to-use components built on Tailwind.
+* **Lucide React & React Icons** - For nice-looking icons.
+* **React Toastify** - For showing simple pop-up messages.
+
+## Key Features
+
+1. **Easy Shopping Cart**  
+   Quickly add products to your cart. The app stops you from adding the same item twice and shows helpful pop-up notices.
+
+2. **Smooth Navigation**  
+   Switch quickly between viewing products and checking your cart. The screen updates instantly without refreshing the page.
+
+3. **Fast Loading**  
+   Product and pricing lists load smoothly in the background. The app shows friendly loading screens instead of feeling stuck or lagging.

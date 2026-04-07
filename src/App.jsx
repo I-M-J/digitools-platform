@@ -50,7 +50,7 @@ function App() {
       <ToolsHeading activeTab={activeTab} setActiveTab={setActiveTab} cartLength={cartLength} />
 
       {activeTab === "products" && (
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<div className='py-15 flex items-center justify-center'><span className="loading loading-spinner text-primary"></span></div>}>
           <ToolsCards toolsDataPromise={toolsDataPromise} cart={cart} setCart={setCart} />
         </Suspense>
       )}
@@ -61,7 +61,7 @@ function App() {
 
       <GetStarted />
 
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<div className='py-15 flex items-center justify-center'><span className="loading loading-spinner text-primary"></span></div>}>
         <Pricing pricingDataPromise={pricingDataPromise} />
       </Suspense>
 
