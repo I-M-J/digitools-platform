@@ -10,6 +10,7 @@ import GetStarted from './components/GetStarted/GetStarted'
 import Pricing from './components/Pricing/Pricing'
 import Transform from './components/Transform/Transform'
 import Footer from './components/Footer/Footer'
+import { ToastContainer } from 'react-toastify'
 
 // const fetchToolsData = fetch("toolsData.json").then(res => res.json())
 
@@ -67,6 +68,8 @@ function App() {
       <Transform />
 
       <Footer />
+
+      <ToastContainer />
     </>
   )
 }

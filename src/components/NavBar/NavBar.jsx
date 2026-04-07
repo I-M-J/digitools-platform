@@ -41,7 +41,7 @@ const NavBar = ({ cartLength }) => {
                     <div className='flex items-center gap-4'>
                         <div className='relative'>
                             <ShoppingCart size={24} />
-                            <span className='absolute -top-3 right-0 bg-rose-600 text-white rounded-full h-4 w-4 flex items-center justify-center text-xs'>{cartLength}</span>
+                            <span className='absolute -top-3 right-0 bg-rose-600 text-white rounded-full h-4 w-4 flex items-center justify-center text-xs' hidden={!cartLength}>{cartLength}</span>
                         </div>
 
                         <button className='text-base font-semibold leading-[120%] text-black10'>Login</button>

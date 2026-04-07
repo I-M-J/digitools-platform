@@ -1,10 +1,13 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 
 const CartItem = ({ tool, cart, setCart }) => {
     const handleRemoveFromCart = () => {
         cart.pop(tool);
 
         setCart([...cart]);
+
+        toast.warn(`${tool.title} removed from cart!`);
     }
 
     return (

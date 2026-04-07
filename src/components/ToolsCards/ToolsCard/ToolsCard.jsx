@@ -1,5 +1,6 @@
 import { Check } from 'lucide-react';
 import React, { useState } from 'react';
+import { toast } from 'react-toastify';
 
 const badgeStyler = (badgeColor) => {
     switch (badgeColor) {
@@ -23,6 +24,10 @@ const ToolsCard = ({ tool, cart, setCart }) => {
             setCart([...cart, tool]);
 
             isAddedToCart = true;
+
+            toast.success(`${tool.title} added to cart!`);
+        } else {
+            toast.error(`${tool.title} already in cart!`);
         }
     }
 

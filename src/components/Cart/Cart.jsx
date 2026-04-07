@@ -1,6 +1,7 @@
 import React from 'react';
 import CartItem from './CartItem.jsx/CartItem';
 import { ShoppingCart } from 'lucide-react';
+import { toast } from 'react-toastify';
 
 const Cart = ({ cart, setCart }) => {
     return (
@@ -22,7 +23,7 @@ const Cart = ({ cart, setCart }) => {
                             {/* array.reduce() can be used for summation of array items */}
                         </div>
 
-                        <button onClick={() => setCart([])} className='btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white h-fit py-3.75 w-full font-bold rounded-full'>Proceed to Checkout</button>
+                        <button onClick={() => (setCart([]), toast.success("Checkout Completed!"))} className='btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white h-fit py-3.75 w-full font-bold rounded-full'>Proceed to Checkout</button>
                     </>
                 )}
 

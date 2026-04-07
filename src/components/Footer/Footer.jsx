@@ -6,7 +6,7 @@ import { RiInstagramFill } from 'react-icons/ri';
 const Footer = () => {
     return (
         <footer className="bg-black10 pt-30 pb-7.5">
-            <div className='max-w-300 w-11/12 xl:w-3/4 mx-auto flex flex-col gap-8 lg:flex-row lg:justify-around mb-20'>
+            <div className='max-w-300 w-11/12 xl:w-3/4 mx-auto flex flex-col gap-8 lg:flex-row lg:justify-between mb-20'>
                 <aside className='text-white/80 text-center md:text-left space-y-4'>
                     <h2 className='text-4xl font-bold text-white'>DigiTools</h2>
                     <p>
