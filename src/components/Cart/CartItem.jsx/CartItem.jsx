@@ -11,10 +11,10 @@ const CartItem = ({ tool, cart, setCart }) => {
     }
 
     return (
-        <div className='bg-[#F9FAFC] p-5 flex items-center justify-between rounded-2xl'>
+        <div className='bg-[#F9FAFC] p-5 flex flex-col gap-4 sm:gap-0 sm:flex-row items-center justify-between rounded-2xl'>
             <div className='flex items-center gap-4'>
                 <div className='w-15 h-15 flex justify-center items-center border border-[#F2F2F2] rounded-full'>
-                    <img className='max-w-8' src={`/src/assets/products/${tool.image}`} alt="" />
+                    <img className='max-w-8' src={`/assets/products/${tool.image}`} alt="" />
                 </div>
 
                 <div className='flex flex-col gap-2 items-start'>
