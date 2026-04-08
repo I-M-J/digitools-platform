@@ -1,5 +1,5 @@
 import React from 'react';
-import bannerImg from "../../assets/banner.png"
+import bannerImg from "/assets/banner.png"
 import { Play } from 'lucide-react';
 
 const Hero = () => {
@@ -57,13 +57,13 @@ const Hero = () => {
 
                             <h3 className='font-medium text-base bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent'>New: Ai-Powered Tools Available</h3>
                         </div>
-                        <h1 className="text-7xl font-extrabold text-black10 leading-21">Supercharge Your<br />Digital Workflow</h1>
+                        <h1 className="text-5xl md:text-7xl font-extrabold text-black10 leading-21">Supercharge Your<br />Digital Workflow</h1>
 
                         <p className="text-justify lg:text-left text-lg leading-10 text-gray62">Access premium AI tools, design assets, templates, and productivity
                             software—all in one place. Start creating faster today.
                         </p>
 
-                        <div className='flex items-center gap-4'>
+                        <div className='flex flex-col md:flex-row items-center gap-4'>
                             <button className='btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white h-fit py-3.75 px-4 font-bold rounded-full'>Explore Products</button>
 
                             <button className="btn border-none bg-linear-to-r from-[#4F39F6] to-[#9514FA] p-0.25 h-fit rounded-full">

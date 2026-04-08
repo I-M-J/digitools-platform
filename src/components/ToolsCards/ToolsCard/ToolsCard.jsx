@@ -36,7 +36,7 @@ const ToolsCard = ({ tool, cart, setCart }) => {
             <div className={`absolute top-2.5 right-2.5 rounded-full px-3 py-1.5 font-medium text-sm ${badgeStyler(tool.badgeColor)}`}>{tool.badge}</div>
 
             <div className='w-15 h-15 flex justify-center items-center border border-[#F2F2F2] rounded-full'>
-                <img className='max-w-8' src={`/src/assets/products/${tool.image}`} alt="" />
+                <img className='max-w-8' src={`/assets/products/${tool.image}`} alt="" />
             </div>
 
             <h2 className='font-bold text-2xl text-black10'>{tool.title}</h2>

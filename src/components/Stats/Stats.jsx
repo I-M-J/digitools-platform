@@ -18,7 +18,7 @@ const stats = [
 const Stats = () => {
     return (
         <section className='w-full py-15 bg-linear-to-r from-[#4F39F6] to-[#9514FA]'>
-            <div className='max-w-300 mx-auto flex justify-around divide-x divide-base-100'>
+            <div className='max-w-300 mx-auto flex flex-col gap-8 md:flex-row justify-between md:divide-x divide-base-100'>
                 {
                     stats.map((stat, index) => (
                         <div key={index} className='flex-1 flex items-center justify-center'>
